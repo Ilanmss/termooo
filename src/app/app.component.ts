@@ -24,7 +24,6 @@ export class AppComponent {
   temLetra3: any = ['nada', 'nada', 'nada', 'nada', 'nada'] // tem, acertou, errou
   temLetra4: any = ['nada', 'nada', 'nada', 'nada', 'nada'] // tem, acertou, errou
   temLetra5: any = ['nada', 'nada', 'nada', 'nada', 'nada'] // tem, acertou, errou
-  temLetraBtn: string = ''
   
   desabilitarChutes: Array<boolean> = [false, true, true, true, true]
   desabilitar1 = false
@@ -45,7 +44,7 @@ export class AppComponent {
   classebtn = ''
   teclei(tecla: any){
     console.log(tecla)
-    let cor = this.corBotao()
+    
     if(this.desabilitarChutes[0] == false){
       for(let i = 0; i<5  ; i++){
         if(this.primeiroChute[i]==''){
@@ -150,17 +149,6 @@ export class AppComponent {
     if(length == 1) final.focus()
   }
 
-  corBotao(){
-    if (this.temLetra1 == 'errou' || this.temLetra2 == 'errou' || this.temLetra3 == 'errou' || this.temLetra4 == 'errou' || this.temLetra5 == 'errou'){
-      this.temLetraBtn = 'errou'
-    }
-    if (this.temLetra1 == 'tem' || this.temLetra2 == 'tem' || this.temLetra3 == 'tem' || this.temLetra4 == 'tem' || this.temLetra5 == 'tem'){
-      this.temLetraBtn = 'tem'
-    }
-    if (this.temLetra1 == 'acertou' || this.temLetra2 == 'acertou' || this.temLetra3 == 'acertou' || this.temLetra4 == 'acertou' || this.temLetra5 == 'acertou'){
-      this.temLetraBtn = 'acertou'
-    }
-    return(this.temLetraBtn)
-  }
+
 
 }
