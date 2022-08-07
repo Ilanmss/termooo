@@ -1,0 +1,102 @@
+h1 {
+    margin-top: 3%;
+}
+
+header {
+    background-color: black;
+    justify-content: center;
+    display: flex;
+    height: 40px;
+    align-items: center;
+}
+
+.red {
+    background-color: red;
+}
+
+.botoes_header {
+    margin: 10px;
+    width: 150px;
+    height: 30px;
+}
+
+.palavra {
+    display: flex;
+    flex-direction: row;
+}
+
+.margem {
+    margin: 5px;
+}
+
+.input_letra {
+    border: 1px solid black;
+    border-radius: 4px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-transform: uppercase;
+    margin: 2px;
+    font-size: large;
+    text-align: center;
+}
+
+.letra_botao {
+    border: 1px solid black;
+    border-radius: 4px;
+    min-width: 50px;
+    height: 50px;
+    max-width: 120px;
+    max-height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: large;
+    text-align: center;
+    justify-content: center;
+}
+
+.letra_botao:hover {
+    background-color: lightsalmon;
+}
+
+.verde {
+    background-color: greenyellow;
+}
+
+.preto {
+    background-color: grey;
+}
+
+.amarelo {
+    background-color: yellow;
+}
+
+.div_botoes {
+    display: flex;
+}
+
+.botoes_diferentes {
+    width: 150px;
+    margin: 10px;
+    height: 50px;
+    max-height: 50px;
+    border: 1px solid black;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: large;
+    text-align: center;
+    justify-content: center;
+}
+
+#jogo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

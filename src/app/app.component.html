@@ -1,2 +1,94 @@
-<p>Termooo</p>
-<p>alteração</p>
+<header>
+    <div class="div_botoes">
+        <button class="botoes_header">PALAVRA</button>
+        <button class="botoes_header">DUPLA</button>
+        <button class="botoes_header">TRIPLA</button>
+    </div>
+</header>
+
+<section id="jogo">
+    <h1>PALAVRAAA</h1>
+    <p>{{letras}}</p>
+    <div class="palavra">
+        <input class="input_letra" value="{{primeiroChute[0]}}" maxlength="1" [ngClass]="{verde: temLetra1[0] == 'acertou', preto: temLetra1[0] == 'errou', amarelo: temLetra1[0] == 'tem' }" (keypress)="teclei($event.key)" #input0 (keyup)="moverFoco(input0, input1)"
+            [disabled]="desabilitar1">
+        <input class="input_letra" value="{{primeiroChute[1]}}" maxlength="1" [ngClass]="{verde: temLetra1[1] == 'acertou', preto: temLetra1[1] == 'errou', amarelo: temLetra1[1] == 'tem' }" (keypress)="teclei($event.key)" #input1 (keyup)="moverFoco(input1, input2)"
+            [disabled]="desabilitar1">
+        <input class="input_letra" value="{{primeiroChute[2]}}" maxlength="1" [ngClass]="{verde: temLetra1[2] == 'acertou', preto: temLetra1[2] == 'errou', amarelo: temLetra1[2] == 'tem' }" (keypress)="teclei($event.key)" #input2 (keyup)="moverFoco(input2, input3)"
+            [disabled]="desabilitar1">
+        <input class="input_letra" value="{{primeiroChute[3]}}" maxlength="1" [ngClass]="{verde: temLetra1[3] == 'acertou', preto: temLetra1[3] == 'errou', amarelo: temLetra1[3] == 'tem' }" (keypress)="teclei($event.key)" #input3 (keyup)="moverFoco(input3, input4)"
+            [disabled]="desabilitar1">
+        <input class="input_letra" value="{{primeiroChute[4]}}" maxlength="1" [ngClass]="{verde: temLetra1[4] == 'acertou', preto: temLetra1[4] == 'errou', amarelo: temLetra1[4] == 'tem' }" (keypress)="teclei($event.key)" #input4 (keyup)="moverFoco(input4, enter)"
+            [disabled]="desabilitar1">
+    </div>
+    <div class="palavra">
+        <input class="input_letra" value="{{segundoChute[0]}}" maxlength="1" [ngClass]="{verde: temLetra2[0] == 'acertou', preto: temLetra2[0] == 'errou', amarelo: temLetra2[0] == 'tem' }" (keypress)="teclei($event.key)" #input0 (keyup)="moverFoco(input0, input1)"
+            [disabled]="desabilitar2">
+        <input class="input_letra" value="{{segundoChute[1]}}" maxlength="1" [ngClass]="{verde: temLetra2[1] == 'acertou', preto: temLetra2[1] == 'errou', amarelo: temLetra2[1] == 'tem' }" (keypress)="teclei($event.key)" #input1 (keyup)="moverFoco(input1, input2)"
+            [disabled]="desabilitar2">
+        <input class="input_letra" value="{{segundoChute[2]}}" maxlength="1" [ngClass]="{verde: temLetra2[2] == 'acertou', preto: temLetra2[2] == 'errou', amarelo: temLetra2[2] == 'tem' }" (keypress)="teclei($event.key)" #input2 (keyup)="moverFoco(input2, input3)"
+            [disabled]="desabilitar2">
+        <input class="input_letra" value="{{segundoChute[3]}}" maxlength="1" [ngClass]="{verde: temLetra2[3] == 'acertou', preto: temLetra2[3] == 'errou', amarelo: temLetra2[3] == 'tem' }" (keypress)="teclei($event.key)" #input3 (keyup)="moverFoco(input3, input4)"
+            [disabled]="desabilitar2">
+        <input class="input_letra" value="{{segundoChute[4]}}" maxlength="1" [ngClass]="{verde: temLetra2[4] == 'acertou', preto: temLetra2[4] == 'errou', amarelo: temLetra2[4] == 'tem' }" (keypress)="teclei($event.key)" #input4 (keyup)="moverFoco(input4, enter)"
+            [disabled]="desabilitar2">
+    </div>
+    <div class="palavra">
+        <input class="input_letra" value="{{terceiroChute[0]}}" maxlength="1" [ngClass]="{verde: temLetra3[0] == 'acertou', preto: temLetra3[0] == 'errou', amarelo: temLetra3[0] == 'tem' }" (keypress)="teclei($event.key)" #input0 (keyup)="moverFoco(input0, input1)"
+            [disabled]="desabilitar3">
+        <input class="input_letra" value="{{terceiroChute[1]}}" maxlength="1" [ngClass]="{verde: temLetra3[1] == 'acertou', preto: temLetra3[1] == 'errou', amarelo: temLetra3[1] == 'tem' }" (keypress)="teclei($event.key)" #input1 (keyup)="moverFoco(input1, input2)"
+            [disabled]="desabilitar3">
+        <input class="input_letra" value="{{terceiroChute[2]}}" maxlength="1" [ngClass]="{verde: temLetra3[2] == 'acertou', preto: temLetra3[2] == 'errou', amarelo: temLetra3[2] == 'tem' }" (keypress)="teclei($event.key)" #input2 (keyup)="moverFoco(input2, input3)"
+            [disabled]="desabilitar3">
+        <input class="input_letra" value="{{terceiroChute[3]}}" maxlength="1" [ngClass]="{verde: temLetra3[3] == 'acertou', preto: temLetra3[3] == 'errou', amarelo: temLetra3[3] == 'tem' }" (keypress)="teclei($event.key)" #input3 (keyup)="moverFoco(input3, input4)"
+            [disabled]="desabilitar3">
+        <input class="input_letra" value="{{terceiroChute[4]}}" maxlength="1" [ngClass]="{verde: temLetra3[4] == 'acertou', preto: temLetra3[4] == 'errou', amarelo: temLetra3[4] == 'tem' }" (keypress)="teclei($event.key)" #input4 (keyup)="moverFoco(input4, enter)"
+            [disabled]="desabilitar3">
+    </div>
+    <div class="palavra">
+        <input class="input_letra" value="{{quartochute[0]}}" maxlength="1" [ngClass]="{verde: temLetra4[0] == 'acertou', preto: temLetra4[0] == 'errou', amarelo: temLetra4[0] == 'tem' }" (keypress)="teclei($event.key)" #input0 (keyup)="moverFoco(input0, input1)"
+            [disabled]="desabilitar4">
+        <input class="input_letra" value="{{quartochute[1]}}" maxlength="1" [ngClass]="{verde: temLetra4[1] == 'acertou', preto: temLetra4[1] == 'errou', amarelo: temLetra4[1] == 'tem' }" (keypress)="teclei($event.key)" #input1 (keyup)="moverFoco(input1, input2)"
+            [disabled]="desabilitar4">
+        <input class="input_letra" value="{{quartochute[2]}}" maxlength="1" [ngClass]="{verde: temLetra4[2] == 'acertou', preto: temLetra4[2] == 'errou', amarelo: temLetra4[2] == 'tem' }" (keypress)="teclei($event.key)" #input2 (keyup)="moverFoco(input2, input3)"
+            [disabled]="desabilitar4">
+        <input class="input_letra" value="{{quartochute[3]}}" maxlength="1" [ngClass]="{verde: temLetra4[3] == 'acertou', preto: temLetra4[3] == 'errou', amarelo: temLetra4[3] == 'tem' }" (keypress)="teclei($event.key)" #input3 (keyup)="moverFoco(input3, input4)"
+            [disabled]="desabilitar4">
+        <input class="input_letra" value="{{quartochute[4]}}" maxlength="1" [ngClass]="{verde: temLetra4[4] == 'acertou', preto: temLetra4[4] == 'errou', amarelo: temLetra4[4] == 'tem' }" (keypress)="teclei($event.key)" #input4 (keyup)="moverFoco(input4, enter)"
+            [disabled]="desabilitar4">
+    </div>
+    <div class="palavra">
+        <input class="input_letra" value="{{quintoChute[0]}}" maxlength="1" [ngClass]="{verde: temLetra5[0] == 'acertou', preto: temLetra5[0] == 'errou', amarelo: temLetra5[0] == 'tem' }" (keypress)="teclei($event.key)" #input0 (keyup)="moverFoco(input0, input1)"
+            [disabled]="desabilitar5">
+        <input class="input_letra" value="{{quintoChute[1]}}" maxlength="1" [ngClass]="{verde: temLetra5[1] == 'acertou', preto: temLetra5[1] == 'errou', amarelo: temLetra5[1] == 'tem' }" (keypress)="teclei($event.key)" #input1 (keyup)="moverFoco(input1, input2)"
+            [disabled]="desabilitar5">
+        <input class="input_letra" value="{{quintoChute[2]}}" maxlength="1" [ngClass]="{verde: temLetra5[2] == 'acertou', preto: temLetra5[2] == 'errou', amarelo: temLetra5[2] == 'tem' }" (keypress)="teclei($event.key)" #input2 (keyup)="moverFoco(input2, input3)"
+            [disabled]="desabilitar5">
+        <input class="input_letra" value="{{quintoChute[3]}}" maxlength="1" [ngClass]="{verde: temLetra5[3] == 'acertou', preto: temLetra5[3] == 'errou', amarelo: temLetra5[3] == 'tem' }" (keypress)="teclei($event.key)" #input3 (keyup)="moverFoco(input3, input4)"
+            [disabled]="desabilitar5">
+        <input class="input_letra" value="{{quintoChute[4]}}" maxlength="1" [ngClass]="{verde: temLetra5[4] == 'acertou', preto: temLetra5[4] == 'errou', amarelo: temLetra5[4] == 'tem' }" (keypress)="teclei($event.key)" #input4 (keyup)="moverFoco(input4, enter)"
+            [disabled]="desabilitar5">
+    </div>
+
+    <div class="div_botoes">
+        <button class="letra_botao" class="botoes_diferentes" (click)="comparar()" #enter> Enter </button>
+        <button class="letra_botao" class="botoes_diferentes" (click)="console()"> Apagar </button>
+    </div>
+
+
+    <div class="palavra">
+        <div *ngFor="let tecla of tecladoLinha1" class="margem">
+            <button class="letra_botao" (click)="teclei(tecla)">{{tecla}}</button>
+        </div>
+    </div>
+    <div class="palavra">
+        <div *ngFor="let tecla of tecladoLinha2" class="margem">
+            <button class="letra_botao" (click)="teclei(tecla)">{{tecla}}</button>
+        </div>
+    </div>
+    <div class="palavra">
+        <div *ngFor="let tecla of tecladoLinha3" class="margem">
+            <button class="letra_botao" (click)="teclei(tecla)">{{tecla}}</button>
+        </div>
+    </div>
+</section>
